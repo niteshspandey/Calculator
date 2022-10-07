@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Quotation{% endblock %}
+
+{% block content %}
+
+<div class="container my-5 mx-auto text-center bg-slate-900 text-white">
+    <form action="/calculate" method="POST" class="m-auto w-2/4 text-center">
+        <p>Calculate</p>
+        <label for="feet1" class="leading-7 text-sm text-white">Feet1</label>
+        <input type="number" step="0.01" max=50 id="feet1" value=0 name="feet1" class="w-full bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> <br>
+    
+        <label for="inches1" class="leading-7 text-sm text-white">Inches1</label>
+        <input type="number" step="0.01" max=150 id="inches1" value=0 name="inches1" class="w-full  bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> <br>
+    
+        <label for="feet2" class="leading-7 text-sm text-white">Feet2</label>
+        <input type="number" step="0.01" max=50 id="feet2" value=0 name="feet2" class="w-full  bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> <br>
+    
+        <label for="inches2" class="leading-7 text-sm text-white">Inches2</label>
+        <input type="number"  step="0.01" max=150 id="inches2" value=0 name="inches2" class="w-full  bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"><br>
+
+        <label for="rate" class="leading-7 text-sm text-white">Rate</label>
+        <input type="number"  step="0.01" max=99999 id="rate" value=1 name="rate" class="w-full  bg-opacity-50 rounded border bg-slate-700 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none  text-center py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"><br>
+    
+        <button type="Submit" class="flex mx-auto my-5 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Calculate</button>
+    </form>
+    
+</div>
+
+{% endblock %}
