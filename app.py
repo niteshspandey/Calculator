@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request,jsonify
 from flask_cors import CORS,cross_origin
 import pandas as pd
-import sqlite3
 
 app = Flask(__name__)   
 
@@ -82,5 +81,7 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=8001, debug=True)
+    app.debug = True
+    app.run()
+    #app.run(host='127.0.0.1', port=8001, debug=True)
 	#app.run(debug=True)
